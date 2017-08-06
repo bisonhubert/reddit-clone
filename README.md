@@ -12,8 +12,8 @@ Base skeleton is from Thoughtbot's open source [Suspenders](https://github.com/t
 Clone the repo:
 `git clone https://github.com/bisonhubert/rails-skeleton.git`
 
-Move into the cloned directory and bundle install
+Move into the cloned directory and bundle install:
 `cd rails-skeleton && bundle install`
 
-Create the database and run pending migrations
+Create the database and run pending migrations:
 `rake db:create && rake db:migrate`
