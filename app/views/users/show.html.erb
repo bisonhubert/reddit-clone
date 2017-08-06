@@ -1,0 +1,11 @@
+<% provide(:title, @user.username) %>
+
+<p id="notice"><%= notice %></p>
+
+<p>
+  <%= gravatar_for @user %>
+  <%= @user.username %>
+</p>
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', root_path %>
