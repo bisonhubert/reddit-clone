@@ -1,13 +1,13 @@
 require 'rails_helper'
 
 describe UsersController do
-  # describe "GET #show" do
-  #   it "returns a success response" do
-  #     user = FactoryGirl.create(:user)
-  #     get :show, params: { id: user.id }, session: valid_session
-  #     expect(response).to be_success
-  #   end
-  # end
+  describe "GET #show" do
+    it "returns a success response" do
+      user = FactoryGirl.create(:user)
+      get :show, params: { id: user.id }, session: valid_session
+      expect(response).to be_success
+    end
+  end
 
   describe "GET #new" do
     it "returns a success response" do
