@@ -1,12 +1,21 @@
-<header>
-  <nav>
-    <%= link_to "Home", root_path %>
-      <% if logged_in? %>
-        <%= link_to "Profile", current_user %>
-        <%= link_to "Settings", edit_user_path(current_user) %>
-        <%= link_to "Log out", logout_path, method: :delete %>
-      <% else %>
-        <%= link_to "Log in", login_path %>
-      <% end %>
+<header class="site-header">
+  <article class="title-card">
+    <div class="logo-container">
+      <%= link_to image_tag("reddit-logo-head-small.png", alt: "reddit-logo", class: "logo" ), root_path, class: "root-link" %>
+    </div>
+    <div class="site-name-container">
+      <h1 class="site-name"><%= link_to "Reddit", root_path, class: "root-link" %></h1>
+    </div>
+  </article>
+  <nav class="site-nav">
+    <%= link_to "Trending", "#", class: "site-link" %>
+    <% if logged_in? %>
+      <%= link_to "Post", "#", class: "site-link" %>
+      <%= link_to "Profile", current_user, class: "site-link" %>
+      <%= link_to "Settings", edit_user_path(current_user), class: "site-link" %>
+      <%= link_to "Log out", logout_path, method: :delete, class: "site-link" %>
+    <% else %>
+      <%= link_to "Log in", login_path, class: "site-link" %>
+    <% end %>
   </nav>
 </header>
