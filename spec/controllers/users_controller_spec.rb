@@ -12,10 +12,7 @@ describe UsersController do
   describe "GET #new" do
     it "returns a success response" do
       get :new
-      p '%' * 25
-      p response
-      p '%' * 25
-      expect(response).to be_success
+      expect(response).to have_http_status(:success)
     end
   end
 
@@ -23,7 +20,7 @@ describe UsersController do
   #   it "returns a success response" do
   #     uuser = FactoryGirl.create(:user)
   #     get :edit, params: { id: user.id }, session: valid_session
-  #     expect(response).to be_success
+  #     expect(response).to have_http_status(:success)
   #   end
   # end
 
@@ -63,7 +60,7 @@ describe UsersController do
             email: 'test@test.com'
           }
         }
-        expect(response).to be_success
+        expect(response).to have_http_status(:success)
       end
     end
   end
