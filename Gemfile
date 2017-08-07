@@ -21,6 +21,7 @@ gem "suspenders"
 gem "title"
 gem "uglifier"
 gem "bcrypt", "~> 3.1.11"
+gem "faker",          "1.7.3"
 
 group :development do
   gem "listen"
