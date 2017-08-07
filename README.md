@@ -1,6 +1,6 @@
 # Reddit Clone
 
-Responsive Reddit clone built using Rails 5 and SCSS. Deployed via Heroku, [click here](#) to view the demo.
+Responsive Reddit clone built using Rails 5 and SCSS. Deployed via Heroku, [click here](https://intense-inlet-68309.herokuapp.com/) to view the demo.
 
 ## Author
 
