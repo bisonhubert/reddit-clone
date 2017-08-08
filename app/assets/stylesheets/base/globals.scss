@@ -35,12 +35,12 @@ body {
 .root-link {
   text-decoration: none;
   text-transform: lowercase;
-  font-family: $header-font;
+  font-family: $primary-font;
   color: $white;
 }
 
 .site-nav {
-  font-family: $header-font;
+  font-family: $primary-font;
   text-align: center;
   padding-bottom: 3%;
 }
@@ -61,9 +61,14 @@ body {
 /* ------------ footer ------------ */
 .site-footer {
   background-color: $flamingo;
-  font-family: $header-font;
+  font-family: $primary-font;
   color: $white;
   text-align: center;
   letter-spacing: 1px;
   padding: 2%;
+  font-size: 14px;
+}
+
+.portfolio-link {
+  margin: 0;
 }
