@@ -11,6 +11,8 @@
   <%= @post.content %>
 </p>
 
-<%= link_to 'Edit', edit_user_post_path(@post.user, @post) %> |
-<%= link_to 'Destroy', user_post_path(@post.user_id, @post), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% if logged_in? && @post.user == current_user %>
+  <%= link_to 'Edit', edit_user_post_path(@post.user, @post) %> |
+  <%= link_to 'Destroy', user_post_path(@post.user_id, @post), method: :delete, data: { confirm: 'Are you sure?' } %> |
+<% end %>
 <%= link_to 'Back', user_posts_path %>
