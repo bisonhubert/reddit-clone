@@ -1,4 +1,5 @@
-.show-wrapper {
+.show-wrapper,
+.previous-posts-wrapper {
   width: 75%;
   margin: 0 auto;
 }
@@ -15,4 +16,44 @@
   font-size: 18px;
   letter-spacing: 0.75px;
   line-height: 1.3
+}
+
+.profile-content {
+  padding-top: 10%;
+  position: flex;
+}
+
+.profile-name {
+  margin: 0 0 0 5%;
+  padding: 0;
+  font-size: 24px;
+  letter-spacing: 1.2px;
+  line-height: 1.5;
+  display: inline-block;
+  width: 50%;
+}
+
+.gravatar-image {
+  width: 50%;
+  display: inline-block;
+  align: center;
+}
+
+.previous-posts-wrapper {
+  margin-top: 7%;
+  margin-bottom: 10%;
+}
+
+.previous-post-title {
+  margin: 10% 0 1%;
+}
+
+.previous-posts-title {
+  font-size: 24px;
+}
+
+.previous-post-publish-date {
+  font-size: 14px;
+  color: $orange;
+  letter-spacing: 1px;
 }
