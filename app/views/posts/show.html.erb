@@ -13,6 +13,16 @@
   </div>
   </p>
 </article>
+<section class="post-comments">
+  <% if @post.comments.any? %>
+    <ol class="comments-list">
+      <% @post.comments.each do |comment| %>
+        <%= comment.content %>
+      <% end %>
+    </ol>
+  <% end %>
+  <%= link_to "Add a new comment", new_post_comment_path(@post), class: "site-link content-link" %>
+</section>
 <nav class="site-nav content-nav">
   <% if logged_in? && @post.user == current_user %>
   <%= link_to "Edit", edit_user_post_path(@post.user, @post), class: "site-link content-link" %>
