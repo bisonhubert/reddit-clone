@@ -1,0 +1,35 @@
+.posts {  
+  background-color: #DADAD9;
+}
+
+.post {
+  width: 75%;
+  margin: 2% auto 15%;
+  color: $black;
+  font-family: $primary-font;
+}
+
+.post:first-child {
+  margin-top: 5%;
+}
+
+.post:last-child {
+  margin-bottom: 5%;
+}
+
+.post-title {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.post-link {
+  color: $black;
+}
+
+.post-byline {
+  color: $orange;
+}
+
+.post-author {
+  color: $black;
+}
