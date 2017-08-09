@@ -1,0 +1,50 @@
+.form-container {
+  width: 75%;
+  margin: 0 auto;
+  color: $black;
+}
+
+.form-title {
+  margin-top: 0;
+  padding-top: 5%;
+}
+
+.field {
+  font-size: 18px;
+  margin-bottom: 5%;
+}
+
+.label{
+  display: inline-block;
+  width: 250px;
+  margin-bottom: 2%;
+}
+
+.input {
+  padding: 3%;
+  border-radius: 5px;
+  width: 300px;
+  width: 90%;
+  background-color: $white;
+  border: none;
+}
+
+.input:not([type=submit]) {
+  font-family: $primary-font;
+  font-size: 14px;
+  letter-spacing: 1px;
+  line-height: 1.2;
+}
+
+.text-area-input {
+  height: 150px;
+}
+
+.button {
+  color: $white;
+  background-color: $orange;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  padding: 3%;
+}

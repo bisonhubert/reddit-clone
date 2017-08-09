@@ -1,7 +1,7 @@
 <% provide(:title, "Add a post") %>
 <% provide(:button_text, "Create post") %>
 
-<h1><%= yield(:title) %></h1>
+<h2 class="form-title"><%= yield(:title) %></h2>
 
 <%= form_for([@user, @post], url: user_posts_path) do |f| %>
   <% if @post.errors.any? %>
