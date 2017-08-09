@@ -7,6 +7,11 @@
   <p class="show-content">
     <%= @post.content %>
   </p>
+  <div class="previous-post-publish-date post-publish-date">Published on <%= format_date(@post.created_at) %>
+  </div>
+  <div class="post-byline">by <%= link_to @post.user.username, user_path(@post.user), class: "post-author" %>
+  </div>
+  </p>
 </article>
 <nav class="site-nav content-nav">
   <% if logged_in? && @post.user == current_user %>
