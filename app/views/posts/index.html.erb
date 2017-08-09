@@ -1,12 +1,12 @@
 <%= provide(:title, 'reddit') %>
 
-<section class="posts">
+<ol class="posts">
   <% @posts.each do |post| %>
-    <article class="post-index">
+    <li class="post-index">
       <h2 class="post-title"><%= link_to post.title, user_post_path(post.user, post), class: "post-link" %>
       </h2>
       <span class="post-byline">by <%= link_to post.user.username, user_path(post.user), class: "post-author" %>
       </span>
-    </article>
+    </li>
   <% end %>
-</section>
+</ol>
