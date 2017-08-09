@@ -37,6 +37,18 @@ body {
   margin: 0;
 }
 
+/* ------------ footer ------------ */
+.site-footer {
+  background-color: $orange;
+  font-family: $primary-font;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 2%;
+  font-size: 14px;
+}
+
+/* ------------ navigation ------------ */
 .root-link {
   text-decoration: none;
   text-transform: lowercase;
@@ -46,8 +58,11 @@ body {
 
 .site-nav {
   font-family: $primary-font;
-  text-align: center;
   padding-bottom: 3%;
+}
+
+.center-nav {
+  text-align: center;
 }
 
 .site-link {
@@ -63,17 +78,16 @@ body {
   }
 }
 
-/* ------------ footer ------------ */
-.site-footer {
-  background-color: $orange;
-  font-family: $primary-font;
-  color: $white;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 2%;
-  font-size: 14px;
-}
-
 .portfolio-link {
   margin: 0;
+}
+
+.content-nav {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.content-link {
+  color: $black;
 }
