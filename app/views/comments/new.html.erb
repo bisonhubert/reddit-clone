@@ -1,0 +1,11 @@
+<article class="new-comment-form">
+  <h3 class="show-title">Add a comment:</h3>
+  <%= form_for([@post, @comment]) do |f| %>
+    <div class="field">
+      <%= f.text_area :content, class: "input text-area-input" %>
+    </div>
+    <div class="action">
+      <%= f.submit class: "button" %>
+    </div>
+  <% end %>
+</article>

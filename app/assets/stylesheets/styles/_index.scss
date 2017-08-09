@@ -1,9 +1,15 @@
+.posts {
+  margin: 0;
+  padding-left: 0;
+}
+
 .post-index {
   width: 75%;
   margin: 2% auto 10%;
   color: $black;
   padding-bottom: 5%;
   border-bottom: 2px solid $white;
+  list-style-type: none;
 }
 
 .post-index:first-child {

@@ -9,4 +9,8 @@ Rails.application.routes.draw do
   resources :users, except: :index do
     resources :posts
   end
+
+  resources :posts do
+    resources :comments
+  end
 end
