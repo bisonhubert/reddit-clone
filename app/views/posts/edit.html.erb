@@ -28,11 +28,11 @@
     </div>
 
     <div class="actions">
-      <%= f.submit yield(:button_text), class: 'button' %>
+      <%= f.submit yield(:button_text), class: "button" %>
     </div>
   <% end %>
 </article>
 
-<nav class='site-nav content-nav'>
-  <%= link_to 'Back to article', user_post_path(@post.user_id, @post), class: 'site-link content-link' %>
+<nav class="site-nav content-nav">
+  <%= link_to "Back to article", user_post_path(@post.user_id, @post), class: "site-link content-link" %>
 </nav>
