@@ -1,17 +1,19 @@
 <% provide(:title, @user.username) %>
-<% provide(:button_text, 'Save changes') %>
+<% provide(:button_text, "Save changes") %>
 
-<h1>Update your profile</h1>
-
-<%= render 'form', user: @user %>
-<div class="gravatar_edit">
-  <%= gravatar_for @user %>
-  <a href="http://gravatar.com/emails" rel="noopener" target="_blank">Change</a>
-</div>
-
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', root_path %> |
-<%= link_to 'Close Account', @user, 
-                           method: :delete, 
-                           data: { confirm: 'Are you sure?' } %>
-                            
+<article class="form-container">
+  <h2 class="form-title">Update your profile</h2>
+  <%= render "form", user: @user %>
+  <div class="gravatar-edit">
+    <%= gravatar_for @user, class: "gravatar-image" %>
+    <a href="http://gravatar.com/emails" rel="noopener" target="_blank" class="gravatar-link site-link content-link">Update Gravatar Image</a>
+  </div>
+</article>
+<nav class="site-nav content-nav">
+  <%= link_to "Show", @user, class: "site-link content-link" %>
+  <%= link_to "Back", root_path, class: "site-link content-link" %>
+  <%= link_to "Close Account", @user, 
+                               class: "site-link content-link",
+                               method: :delete, 
+                               data: { confirm: "Are you sure?" } %>
+</nav>

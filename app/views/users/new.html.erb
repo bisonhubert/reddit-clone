@@ -1,8 +1,11 @@
 <% provide(:title, 'Sign Up') %>
 <% provide(:button_text, 'Create my account') %>
 
-<h1><%= yield(:title) %></h1>
+<article class="form-container">
+  <h2 class="form-title"><%= yield(:title) %></h2>
 
-<%= render 'form', user: @user %>
-
-<%= link_to 'Back', root_path %>
+  <%= render 'form', user: @user %>
+</article>
+<nav class="site-nav content-nav">
+  <%= link_to 'Back', root_path, class: "site-link content-link" %>
+</nav>

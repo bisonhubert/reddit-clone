@@ -1,34 +1,37 @@
 <% provide(:title, "Add a post") %>
 <% provide(:button_text, "Create post") %>
 
-<h2 class="form-title"><%= yield(:title) %></h2>
+<article class="form-container">
+  <h2 class="form-title"><%= yield(:title) %></h2>
 
-<%= form_for([@user, @post], url: user_posts_path) do |f| %>
-  <% if @post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
+  <%= form_for([@user, @post], url: user_posts_path) do |f| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
-      <ul>
-      <% @post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title, class: "label" %>
+      <%= f.text_field :title, class: "input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :content, class: "label" %>
+      <%= f.text_area :content, class: "input text-area-input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit yield(:button_text), class: "button" %>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-
-  <div class="field">
-    <%= f.label :content %>
-    <%= f.text_area :content %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit yield(:button_text) %>
-  </div>
-<% end %>
-
-<%= link_to 'Back', user_posts_path %>
+</article>
+<nav class="site-nav content-nav">
+  <%= link_to "Back", user_posts_path, class: "site-link content-link" %>
+</nav>

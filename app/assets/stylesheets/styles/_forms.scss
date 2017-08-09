@@ -6,7 +6,7 @@
 
 .form-title {
   margin-top: 0;
-  padding-top: 5%;
+  padding-top: 10%;
 }
 
 .field {
@@ -47,4 +47,22 @@
   border-radius: 5px;
   font-size: 18px;
   padding: 3%;
+  margin: 2% 0;
+}
+
+.check-box-label {
+  width: auto;
+}
+
+.site-nav-message {
+  letter-spacing: 1px;
+}
+
+.gravatar-edit {
+  margin: 5% 0;
+}
+
+.gravatar-link {
+  margin-top: 2%;
+  display: block;
 }
