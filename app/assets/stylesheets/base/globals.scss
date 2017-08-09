@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  font-family: $primary-font;
+}
+
+.main-content {
+  background-color: $grey;
 }
 
 /* ------------ header ------------ */

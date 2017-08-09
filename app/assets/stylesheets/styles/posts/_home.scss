@@ -1,21 +1,17 @@
-.posts {  
-  background-color: #DADAD9;
-}
-
-.post {
+.post-index {
   width: 75%;
   margin: 2% auto 10%;
   color: $black;
-  font-family: $primary-font;
   padding-bottom: 5%;
-  border-bottom: 3px solid $white;
+  border-bottom: 2px solid $white;
 }
 
-.post:first-child {
-  margin-top: 5%;
+.post-index:first-child {
+  margin-top: 0;
+  padding-top: 5%;
 }
 
-.post:last-child {
+.post-index:last-child {
   margin-bottom: 5%;
   border: none
 }
