@@ -4,9 +4,11 @@
 
 .post {
   width: 75%;
-  margin: 2% auto 15%;
+  margin: 2% auto 10%;
   color: $black;
   font-family: $primary-font;
+  padding-bottom: 5%;
+  border-bottom: 3px solid $white;
 }
 
 .post:first-child {
@@ -15,11 +17,13 @@
 
 .post:last-child {
   margin-bottom: 5%;
+  border: none
 }
 
 .post-title {
   margin-top: 0;
   font-size: 18px;
+  letter-spacing: 1.2px;
 }
 
 .post-link {
@@ -27,7 +31,9 @@
 }
 
 .post-byline {
+  font-size: 14px;
   color: $orange;
+  letter-spacing: 1px;
 }
 
 .post-author {
