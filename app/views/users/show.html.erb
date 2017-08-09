@@ -1,16 +1,24 @@
 <% provide(:title, @user.username) %>
 
 <article class="show-wrapper">
-  <h2 class="show-title">
-    <%= @user.username + "'s Profile" %>
-  </h2>
-  <p class="show-content">
+  <div class="show-content profile-content">
     <%= gravatar_for @user, class: "gravatar-image" %>
-  </p>
+    <h2 class="show-title profile-name">
+      <%= @user.username + "'s Profile" %>
+    </h2>
+  </div>
 </article>
-<article>
-  
-</article>
+<section class="previous-posts-wrapper post-wrapper">
+  <h3 class="previous-posts-title posts-title">Older Posts</h3>
+  <% @user.posts.each do |post| %>
+    <article class="previous-post post">
+      <h2 class="previous-post-title post-title"><%= link_to post.title, user_post_path(post.user, post), class: "previous-post-link post-link" %>
+      </h2>
+      <span class="previous-post-publish-date post-publish-date">Published on <%= format_date(post.created_at) %>
+      </span>
+    </article>
+  <% end %>
+</section>
 <nav class="site-nav content-nav">
   <%= link_to "Settings", edit_user_path(current_user), class: "site-link content-link"  %>
   <%= link_to "Back", root_path, class: "site-link content-link"  %>
