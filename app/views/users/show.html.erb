@@ -1,9 +1,17 @@
 <% provide(:title, @user.username) %>
 
-<p>
-  <%= gravatar_for @user %>
-  <%= @user.username %>
-</p>
-
-<%= link_to "Settings", edit_user_path(current_user) %> |
-<%= link_to 'Back', root_path %>
+<article class="show-wrapper">
+  <h2 class="show-title">
+    <%= @user.username + "'s Profile" %>
+  </h2>
+  <p class="show-content">
+    <%= gravatar_for @user, class: "gravatar-image" %>
+  </p>
+</article>
+<article>
+  
+</article>
+<nav class="site-nav content-nav">
+  <%= link_to "Settings", edit_user_path(current_user), class: "site-link content-link"  %>
+  <%= link_to "Back", root_path, class: "site-link content-link"  %>
+</nav>
