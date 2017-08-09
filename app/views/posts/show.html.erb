@@ -1,17 +1,19 @@
 <%= provide(:title, @post.title) %>
 
-<p>
-  <strong>Title:</strong>
-  <%= @post.title %>
-</p>
-
-<p>
-  <strong>Content:</strong>
-  <%= @post.content %>
-</p>
-
-<% if logged_in? && @post.user == current_user %>
-  <%= link_to 'Edit', edit_user_post_path(@post.user, @post) %> |
-  <%= link_to 'Destroy', user_post_path(@post.user_id, @post), method: :delete, data: { confirm: 'Are you sure?' } %> |
-<% end %>
-<%= link_to 'Back', user_posts_path %>
+<section class="show-wrapper">
+  <article class="post-show">
+    <h2 class="post-show-title">
+      <%= @post.title %>
+    </h2>
+    <p class="post-show-content">
+      <%= @post.content %>
+    </p>
+  </article>
+</section>
+<nav class="site-nav article-nav">
+  <% if logged_in? && @post.user == current_user %>
+  <%= link_to 'Edit', edit_user_post_path(@post.user, @post), class: "site-link article-link" %>
+  <%= link_to 'Destroy', user_post_path(@post.user_id, @post), method: :delete, data: { confirm: 'Are you sure?' }, class: "site-link article-link" %>
+  <% end %>
+  <%= link_to 'Back', user_posts_path, class: "site-link article-link" %>
+</nav>
