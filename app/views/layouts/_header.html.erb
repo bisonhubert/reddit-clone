@@ -7,12 +7,11 @@
       <h1 class="site-name"><%= link_to "Reddit", root_path, class: "root-link" %></h1>
     </div>
   </article>
-  <nav class="site-nav">
-    <%= link_to "Trending", "#", class: "site-link" %>
+  <nav class="site-nav center-nav">
+    <%= link_to "Home", root_url, class: "site-link" %>
     <% if logged_in? %>
-      <%= link_to "Post", "#", class: "site-link" %>
+      <%= link_to "New Post", new_user_post_path(current_user), class: "site-link" %>
       <%= link_to "Profile", current_user, class: "site-link" %>
-      <%= link_to "Settings", edit_user_path(current_user), class: "site-link" %>
       <%= link_to "Log out", logout_path, method: :delete, class: "site-link" %>
     <% else %>
       <%= link_to "Log in", login_path, class: "site-link" %>

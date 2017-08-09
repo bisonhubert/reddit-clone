@@ -1,10 +1,15 @@
 body {
   margin: 0;
+  font-family: $primary-font;
+}
+
+.main-content {
+  background-color: $grey;
 }
 
 /* ------------ header ------------ */
 .site-header {
-  background-color: $flamingo;
+  background-color: $orange;
   padding-top: 2%;
 }
 
@@ -32,6 +37,18 @@ body {
   margin: 0;
 }
 
+/* ------------ footer ------------ */
+.site-footer {
+  background-color: $orange;
+  font-family: $primary-font;
+  color: $white;
+  text-align: center;
+  letter-spacing: 1px;
+  padding: 2%;
+  font-size: 14px;
+}
+
+/* ------------ navigation ------------ */
 .root-link {
   text-decoration: none;
   text-transform: lowercase;
@@ -41,15 +58,18 @@ body {
 
 .site-nav {
   font-family: $primary-font;
-  text-align: center;
   padding-bottom: 3%;
+}
+
+.center-nav {
+  text-align: center;
 }
 
 .site-link {
   color: $white;
   letter-spacing: 1px;
   font-size: 16px;
-  margin: 1%;
+  margin: 1% 4% 1% 0;
 }
 
 @media screen and (max-width: 350px) {
@@ -58,17 +78,16 @@ body {
   }
 }
 
-/* ------------ footer ------------ */
-.site-footer {
-  background-color: $flamingo;
-  font-family: $primary-font;
-  color: $white;
-  text-align: center;
-  letter-spacing: 1px;
-  padding: 2%;
-  font-size: 14px;
-}
-
 .portfolio-link {
   margin: 0;
+}
+
+.content-nav {
+  width: 75%;
+  margin: 0 auto;
+  padding: 5%;
+}
+
+.content-link {
+  color: $black;
 }

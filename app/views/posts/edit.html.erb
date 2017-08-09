@@ -1,0 +1,38 @@
+<% provide(:title, "Edit post") %>
+<% provide(:button_text, "Edit") %>
+
+<article class="form-container">
+  <h2 class="form-title"><%= yield(:title) %></h2>
+
+  <%= form_for([@post.user, @post], url: user_post_path(@post.user, @post)) do |f| %>
+    <% if @post.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+        <ul>
+        <% @post.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <div class="field">
+      <%= f.label :title, class: "label" %>
+      <%= f.text_field :title, class: "input" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :content, class: "label" %>
+      <%= f.text_area :content, class: "input text-area-input" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit yield(:button_text), class: 'button' %>
+    </div>
+  <% end %>
+</article>
+
+<nav class='site-nav content-nav'>
+  <%= link_to 'Back to article', user_post_path(@post.user_id, @post), class: 'site-link content-link' %>
+</nav>
