@@ -7,7 +7,7 @@
       <h1 class="site-name"><%= link_to "Reddit", root_path, class: "root-link" %></h1>
     </div>
   </article>
-  <nav class="site-nav">
+  <nav class="site-nav center-nav">
     <%= link_to "Home", root_url, class: "site-link" %>
     <% if logged_in? %>
       <%= link_to "New Post", new_user_post_path(current_user), class: "site-link" %>
