@@ -1,7 +1,6 @@
 .show-wrapper,
 .previous-posts-wrapper,
-.post-comments,
-.new-comment-form {
+.post-comments {
   width: 75%;
   margin: 0 auto;
 }
@@ -58,4 +57,33 @@
   font-size: 14px;
   color: $orange;
   letter-spacing: 1px;
+}
+
+@media screen and (min-width: 600px) {
+  .show-wrapper,
+  .previous-posts-wrapper,
+  .post-comments,
+  .new-comment-form {
+    width: 55%;
+  }
+
+  .show-title {
+    padding-top: 25px;
+  }
+
+  .profile-content {
+    padding-top: 25px;
+  }
+
+  .profile-name {
+    margin-left: 15px;
+  }
+
+  .previous-posts-wrapper {
+    margin: 50px auto 25px;
+  }
+
+  .previous-post-title {
+    margin: 25px 0 5px;
+  }
 }

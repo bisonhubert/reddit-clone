@@ -1,11 +1,7 @@
 <header class="site-header">
   <article class="title-card">
-    <div class="logo-container">
-      <%= link_to image_tag("reddit-logo-head-small.png", alt: "reddit-logo", class: "logo" ), root_path, class: "root-link" %>
-    </div>
-    <div class="site-name-container">
-      <h1 class="site-name"><%= link_to "Reddit", root_path, class: "root-link" %></h1>
-    </div>
+    <%= image_tag("reddit-logo-head-small.png", alt: "reddit-logo", class: "logo" ) %>
+    <h1 class="site-name"><%= link_to "Reddit", root_path, class: "root-link" %></h1>
   </article>
   <nav class="site-nav center-nav">
     <%= link_to "Home", root_url, class: "site-link" %>

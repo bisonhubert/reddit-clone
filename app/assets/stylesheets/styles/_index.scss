@@ -43,3 +43,40 @@
 .post-author {
   color: $black;
 }
+
+@media screen and (min-width: 600px) {
+  .post-index {
+    width: 55%;
+    margin: 15px auto;
+    padding: 10px 0;
+  }
+
+  .post-index:first-child {
+    padding-top: 25px;
+  }
+
+  .post-index:last-child {
+    padding-bottom: 50px;
+  }
+
+  .post-title {
+    margin-top: 0;
+    font-size: 18px;
+    letter-spacing: 1.2px;
+    line-height: 1.5;
+  }
+
+  .post-link {
+    color: $black;
+  }
+
+  .post-byline {
+    font-size: 14px;
+    color: $orange;
+    letter-spacing: 1px;
+  }
+
+  .post-author {
+    color: $black;
+  }  
+}
