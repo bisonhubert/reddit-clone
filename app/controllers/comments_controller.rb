@@ -10,10 +10,10 @@ class CommentsController < ApplicationController
     @post = Post.find(params[:post_id])
     @comment = @post.comments.new(comment_params)
     if @comment.save
-      flash[:success] = 'Comment was successfully created.'
+      flash[:success] = "Comment was successfully created."
       redirect_to user_post_path(@user, @post)
     else
-      flash[:alert] = 'Something went wrong.'
+      flash[:alert] = "Something went wrong."
     end
   end
  

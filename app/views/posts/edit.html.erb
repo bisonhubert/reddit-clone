@@ -1,4 +1,4 @@
-<% provide(:title, "Edit post") %>
+<% provide(:title, "Edit Post") %>
 <% provide(:button_text, "Edit") %>
 
 <article class="form-container">
@@ -6,7 +6,7 @@
 
   <%= form_for([@post.user, @post], url: user_post_path(@post.user, @post)) do |f| %>
     <% if @post.errors.any? %>
-      <div id="error_explanation">
+      <div id="error-explanation">
         <h2><%= pluralize(@post.errors.count, "error") %> prohibited this post from being saved:</h2>
 
         <ul>
