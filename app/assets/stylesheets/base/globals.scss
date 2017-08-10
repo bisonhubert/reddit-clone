@@ -126,3 +126,36 @@ body {
     margin: 0;
   }
 }
+
+/* ------------ flash messages ------------ */
+.flash-success {
+  color: $green;
+  background-color: $light-green;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.flash-alert {
+  color: $red;
+  background-color: $light-red;
+  text-align: center;
+  padding: 5px 0;
+}
+
+/* ------------ error messages ------------ */
+#error-explanation {
+  background-color: $light-red;
+  color: $red;
+  width: 83%;
+  padding: 0 5%;
+  border: 1px solid $red;
+  border-radius: 5px;
+  margin-bottom: 5%;
+}
+
+@media screen and (min-width: 600px) {
+  #error-explantion {
+    width: 88%;
+    padding: 1% 2%;
+  }
+}
