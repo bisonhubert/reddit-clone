@@ -8,4 +8,4 @@ Responsive Reddit clone built using Rails 5 and SCSS. Deployed via Heroku, [clic
 
 ## Acknowledgments
 
-* Built off my own [Rails 5 skeleton](https://github.com/bisonhubert/rails-skeleton) to get started with users and sessions quickly.
+* Built off my own [Rails 5 skeleton](https://github.com/bisonhubert/rails-skeleton) to get a head start with users and sessions.
