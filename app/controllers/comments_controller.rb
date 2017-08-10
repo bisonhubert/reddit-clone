@@ -1,5 +1,5 @@
 class CommentsController < ApplicationController
-  before_action :correct_user,  only: [:create]
+  before_action :correct_user,  only: [:new, :create]
   before_action :set_post,      only: [:new, :create]
 
   def new

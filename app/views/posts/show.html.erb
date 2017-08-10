@@ -21,7 +21,9 @@
       <% end %>
     </ol>
   <% end %>
-  <%= link_to "Add a new comment", new_post_comment_path(@post), class: "site-link content-link" %>
+  <% if logged_in? %>
+    <%= link_to "Add a new comment", new_post_comment_path(@post), class: "site-link content-link" %>
+  <% end %>
 </section>
 <nav class="site-nav content-nav">
   <% if logged_in? && @post.user == current_user %>
