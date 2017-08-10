@@ -126,3 +126,18 @@ body {
     margin: 0;
   }
 }
+
+/* ------------ flash messages ------------ */
+.flash-success {
+  color: $green;
+  background-color: $light-green;
+  text-align: center;
+  padding: 5px 0;
+}
+
+.flash-alert {
+  color: $red;
+  background-color: $light-red;
+  text-align: center;
+  padding: 5px 0;
+}
